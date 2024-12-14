@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камінь-Ножиці-Папір</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Гра: Камінь, Ножиці, Папір</h1>
+
+        <div class="scoreboard">
+            <p>Гравець: <span id="player-score">0</span></p>
+            <p>Комп'ютер: <span id="computer-score">0</span></p>
+            <p>Нічия: <span id="draw-score">0</span></p> <!-- Додаємо відображення нічиїх -->
+        </div>
+
+        <div class="buttons">
+            <button onclick="playGame('rock')">🗿 Камінь</button>
+            <button onclick="playGame('scissors')">✂️ Ножиці</button>
+            <button onclick="playGame('paper')">📄 Папір</button>
+        </div>
+
+        <div class="music-controls">
+            <button id="music-toggle" onclick="toggleMusic()">🔊 Увімкнути музику</button>
+            <label for="volume-control">🔈 Гучність:</label>
+            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5" onchange="changeVolume(this.value)">
+        </div>
+        
+
+        <div id="result">
+            <p id="player-choice"></p>
+            <p id="computer-choice"></p>
+            <h2 id="winner"></h2>
+        </div>
+
+        <button id="theme-toggle" onclick="toggleTheme()">🔆 Перемкнути тему</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
